@@ -20,7 +20,7 @@ export default defineComponent({
 h1 {
   margin: 40px 0 0;
   font-family: "Quantico", sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   color: #ff886c;
   padding-top: 40px;
 }
