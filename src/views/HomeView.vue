@@ -53,7 +53,7 @@ export default defineComponent({
 
 @media screen and (max-width: 600px) {
   .logo {
-    width: 50%; /* Reduce the logo's max-width for smaller screens */
+    width: 80%; /* Reduce the logo's max-width for smaller screens */
   }
 }
 @font-face {
