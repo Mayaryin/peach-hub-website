@@ -20,6 +20,9 @@ export default defineComponent({
   components: {
     HeadLine,
   },
+  created() {
+    document.title = "Peachhub TU Berlin";
+  },
   data() {
     return {
       headLineMessage: "WEBSITE COMING AUG 2023",
