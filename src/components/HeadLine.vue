@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 :style="headlineStyles">{{ msg }}</h1>
   </div>
 </template>
 
@@ -12,18 +12,25 @@ export default defineComponent({
   props: {
     msg: String,
   },
+  computed: {
+    headlineStyles() {
+      return {
+        fontSize: this.isMobile ? "32px" : "50px",
+        marginTop: this.isMobile ? "20px" : "40px",
+        paddingTop: this.isMobile ? "20px" : "40px",
+        color: "#ff886c", // Add the color style
+        fontFamily: '"Quantico", sans-serif', // Replace "Your Desired Font" with the actual font you want to use
+      };
+    },
+    isMobile() {
+      return window.innerWidth <= 768; // Adjust the breakpoint as needed
+    },
+  },
 });
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  margin: 40px 0 0;
-  font-family: "Quantico", sans-serif;
-  font-size: 50px;
-  color: #ff886c;
-  padding-top: 40px;
-}
 ul {
   list-style-type: none;
   padding: 0;
